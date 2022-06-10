@@ -1,0 +1,35 @@
+{
+  "name": "gcsproxy",
+  "env": {
+    "GCS_PROXY_BUCKET": {
+      "description": "GCS bucket name.",
+      "required": true,
+      "order": 1
+    },
+    "GCS_PROXY_PATH_PREFIX": {
+      "description": "URL path prefix. use it as GCS object key from URL path exclude the path prefix.",
+      "value": "/",
+      "required": false,
+      "order": 2
+    },
+    "GCS_PROXY_INDEX_FILE": {
+      "description": "Index file name.",
+      "value": "index.html",
+      "required": false,
+      "order": 3
+    },
+    "GCS_PROXY_NOT_FOUND_PATH": {
+      "description": "Path for not found error.",
+      "value": "/404.html",
+      "required": false,
+      "order": 4
+    }
+  },
+  "options": {
+    "allow-unauthenticated": false,
+    "memory": "128Mi",
+    "cpu": "1",
+    "port": 80,
+    "http2": false
+  }
+}
